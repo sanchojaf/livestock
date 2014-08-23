@@ -1,0 +1,33 @@
+<%= form_for(@pregnancy) do |f| %>
+  <% if @pregnancy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pregnancy.errors.count, "error") %> prohibited this pregnancy from being saved:</h2>
+
+      <ul>
+      <% @pregnancy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :artificial_insemination %><br>
+    <%= f.check_box :artificial_insemination %>
+  </div>
+  <div class="field">
+    <%= f.label :riding_date %><br>
+    <%= f.date_select :riding_date %>
+  </div>
+  <div class="field">
+    <%= f.label :expected_birth_date %><br>
+    <%= f.date_select :expected_birth_date %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %><br>
+    <%= f.date_select :birth_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

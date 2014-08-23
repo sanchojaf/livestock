@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date first milking:</strong>
+  <%= @period_milk_production.date_first_milking %>
+</p>
+
+<p>
+  <strong>Livestock:</strong>
+  <%= @period_milk_production.livestock %>
+</p>
+
+<%= link_to 'Edit', edit_period_milk_production_path(@period_milk_production) %> |
+<%= link_to 'Back', period_milk_productions_path %>

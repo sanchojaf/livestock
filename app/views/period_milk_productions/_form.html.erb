@@ -1,0 +1,25 @@
+<%= form_for(@period_milk_production) do |f| %>
+  <% if @period_milk_production.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@period_milk_production.errors.count, "error") %> prohibited this period_milk_production from being saved:</h2>
+
+      <ul>
+      <% @period_milk_production.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_first_milking %><br>
+    <%= f.date_select :date_first_milking %>
+  </div>
+  <div class="field">
+    <%= f.label :livestock_id %><br>
+    <%= f.text_field :livestock_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

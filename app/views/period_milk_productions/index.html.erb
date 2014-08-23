@@ -1,0 +1,27 @@
+<h1>Listing period_milk_productions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date first milking</th>
+      <th>Livestock</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @period_milk_productions.each do |period_milk_production| %>
+      <tr>
+        <td><%= period_milk_production.date_first_milking %></td>
+        <td><%= period_milk_production.livestock %></td>
+        <td><%= link_to 'Show', period_milk_production %></td>
+        <td><%= link_to 'Edit', edit_period_milk_production_path(period_milk_production) %></td>
+        <td><%= link_to 'Destroy', period_milk_production, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Period milk production', new_period_milk_production_path %>

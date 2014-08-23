@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @livestock.name %>
+</p>
+
+<p>
+  <strong>Day of birth:</strong>
+  <%= @livestock.day_of_birth %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @livestock.gender %>
+</p>
+
+<%= link_to 'Edit', edit_livestock_path(@livestock) %> |
+<%= link_to 'Back', livestocks_path %>

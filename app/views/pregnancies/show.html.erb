@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artificial insemination:</strong>
+  <%= @pregnancy.artificial_insemination %>
+</p>
+
+<p>
+  <strong>Riding date:</strong>
+  <%= @pregnancy.riding_date %>
+</p>
+
+<p>
+  <strong>Expected birth date:</strong>
+  <%= @pregnancy.expected_birth_date %>
+</p>
+
+<p>
+  <strong>Birth date:</strong>
+  <%= @pregnancy.birth_date %>
+</p>
+
+<%= link_to 'Edit', edit_pregnancy_path(@pregnancy) %> |
+<%= link_to 'Back', pregnancies_path %>

@@ -1,0 +1,31 @@
+<h1>Listing pregnancies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Artificial insemination</th>
+      <th>Riding date</th>
+      <th>Expected birth date</th>
+      <th>Birth date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pregnancies.each do |pregnancy| %>
+      <tr>
+        <td><%= pregnancy.artificial_insemination %></td>
+        <td><%= pregnancy.riding_date %></td>
+        <td><%= pregnancy.expected_birth_date %></td>
+        <td><%= pregnancy.birth_date %></td>
+        <td><%= link_to 'Show', pregnancy %></td>
+        <td><%= link_to 'Edit', edit_pregnancy_path(pregnancy) %></td>
+        <td><%= link_to 'Destroy', pregnancy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pregnancy', new_pregnancy_path %>

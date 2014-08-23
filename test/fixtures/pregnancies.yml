@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  artificial_insemination: false
+  riding_date: 2014-04-26
+  expected_birth_date: 2014-04-26
+  birth_date: 2014-04-26
+
+two:
+  artificial_insemination: false
+  riding_date: 2014-04-26
+  expected_birth_date: 2014-04-26
+  birth_date: 2014-04-26

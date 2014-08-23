@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_first_milking: 2014-04-26
+  livestock_id: 
+
+two:
+  date_first_milking: 2014-04-26
+  livestock_id: 
